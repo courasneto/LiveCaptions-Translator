@@ -172,6 +172,8 @@ namespace LiveCaptionsTranslator.models
             { "ja-JP", "JA" },
             { "ko-KR", "KO" },
             { "fr-FR", "FR" },
+            { "th-TH", "TH" },
+            { "pt-BR", "PT-BR" }, // DeepL usa PT-BR
         };
 
         private string apiKey = "";
@@ -210,15 +212,16 @@ namespace LiveCaptionsTranslator.models
 
         [JsonIgnore]
         public override Dictionary<string, string> SupportedLanguages { get; } = new()
-    {
-        { "zh-CN", "zh-CHS" }, 
-        { "zh-TW", "zh-CHT" }, 
-        { "en-US", "en" },      
-        { "ja-JP", "ja" },      
-        { "ko-KR", "ko" },     
-        { "fr-FR", "fr" },      
-        { "th-TH", "th" },
-    };
+        {
+            { "zh-CN", "zh-CHS" },
+            { "zh-TW", "zh-CHT" },
+            { "en-US", "en" },
+            { "ja-JP", "ja" },
+            { "ko-KR", "ko" },
+            { "fr-FR", "fr" },
+            { "th-TH", "th" },
+            { "pt-BR", "pt" }, // Youdao usa "pt" para português
+        };
 
         private string appKey = "";
         private string appSecret = "";
@@ -267,6 +270,7 @@ namespace LiveCaptionsTranslator.models
             { "ja-JP", "ja" },
             { "ko-KR", "ko" },
             { "fr-FR", "fr" },
+            { "pt-BR", "pt" }, // MTranServer usa "pt"
         };
 
         private string apiKey = "";
@@ -327,13 +331,14 @@ namespace LiveCaptionsTranslator.models
         [JsonIgnore]
         public override Dictionary<string, string> SupportedLanguages { get; } = new()
         {
-            { "zh-CN", "zh" }, 
-            { "zh-TW", "cht" }, 
-            { "en-US", "en" },      
-            { "ja-JP", "jp" },      
-            { "ko-KR", "kor" },     
-            { "fr-FR", "fra" },      
+            { "zh-CN", "zh" },
+            { "zh-TW", "cht" },
+            { "en-US", "en" },
+            { "ja-JP", "jp" },
+            { "ko-KR", "kor" },
+            { "fr-FR", "fra" },
             { "th-TH", "th" },
+            { "pt-BR", "pt" }, // Baidu usa "pt"
         };
 
         private string appId = "";
